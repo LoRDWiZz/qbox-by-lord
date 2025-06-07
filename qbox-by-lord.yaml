@@ -63,25 +63,6 @@ tasks:
     dest: ./resources/[standalone]
     src: ./tmp/illenium-appearance.zip
 
-  - action: download_github
-    dest: ./resources/[standalone]/MugShotBase64
-    ref: main
-    src: https://github.com/BaziForYou/MugShotBase64
-    subpath: MugShotBase64
-
-  - action: download_file
-    url: https://raw.githubusercontent.com/BaziForYou/MugShotBase64/main/README.md
-    path: ./resources/[standalone]/MugShotBase64/README.md
-
-  - action: download_file
-    url: https://raw.githubusercontent.com/BaziForYou/MugShotBase64/main/LICENSE.md
-    path: ./resources/[standalone]/MugShotBase64/LICENSE.md
-
-  - action: download_github
-    dest: ./resources/[qbx]/qbx_idcard
-    ref: main
-    src: https://github.com/Qbox-project/qbx_idcard
-
     # VOICE
   - action: download_github
     dest: ./resources/[voice]/pma-voice
@@ -114,13 +95,6 @@ tasks:
 
   - action: waste_time # prevent github throttling
     seconds: 10
-
-  - action: download_github
-    dest: ./resources/[qbx]/qbx_vehicleshop
-    ref: main
-    src: https://github.com/qbox-project/qbx_vehicleshop
-  - action: query_database
-    file: ./resources/[qbx]/qbx_vehicleshop/vehshop.sql
 
   - action: download_github
     dest: ./resources/[qbx]/qbx_medical

@@ -1,17 +1,3 @@
-CREATE TABLE IF NOT EXISTS `player_mails` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `citizenid` varchar(50) DEFAULT NULL,
-  `sender` varchar(50) DEFAULT NULL,
-  `subject` varchar(50) DEFAULT NULL,
-  `message` text DEFAULT NULL,
-  `read` tinyint(4) DEFAULT 0,
-  `mailid` int(11) DEFAULT NULL,
-  `date` timestamp NULL DEFAULT current_timestamp(),
-  `button` text DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `citizenid` (`citizenid`)
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
 CREATE TABLE IF NOT EXISTS `playerskins` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `citizenid` varchar(255) NOT NULL,

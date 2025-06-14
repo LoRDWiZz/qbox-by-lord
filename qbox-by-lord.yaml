@@ -93,6 +93,20 @@ tasks:
   - action: query_database
     file: ./resources/[qbx]/qbx_vehicles/vehicles.sql
 
+  - action: download_file
+    path: ./tmp/qbx_adminmenu.zip
+    url: https://github.com/qbox-project/qbx_adminmenu/releases/latest/download/qbx_adminmenu.zip
+  - action: unzip
+    dest: ./resources/[qbx]
+    src: ./tmp/qbx_adminmenu.zip
+
+  - action: download_file
+    path: ./tmp/qbx_garages.zip
+    url: https://github.com/qbox-project/qbx_garages/releases/latest/download/qbx_garages.zip
+  - action: unzip
+    dest: ./resources/[qbx]
+    src: ./tmp/qbx_garages.zip
+
   - action: waste_time # prevent github throttling
     seconds: 10
 
